@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>EAD Calculadora</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <article class="container-center">
+      <div class="header-wrapper">
+        <span class="logo-header">
+          <a href="javascript:void(0)">
+            <img src="./images/logo-header.png" alt="EAD Calculadora" />
+          </a>
+        </span>
+        <nav class="menu-header">
+          <ul class="menu-header__list">
+            <li class="menu-header__item"><a href="/recursos">Recursos</a></li>
+            <li class="menu-header__item"><a href="/exemplos">Exemplos</a></li>
+            <li class="menu-header__item"><a href="/blog">blog</a></li>
+            <li class="menu-header__item"><a href="/seja-um-parceiro">Seja um Parceiro</a></li>
+            <li class="menu-header__item"><a href="/fale-conosco">Fale conosco</a></li>
+            <span class="menu-header__item-promotion"><a href="javascript:void(0)">Teste 7 Dias Grátis 🚀 <span
+                  class="icon-foguete"></span></a></span>
+          </ul>
+        </nav>
+        <span class="hide-on-desktop menu-hamburguer"></span>
+      </div>
+    </article>
+  </header>
+
+  <article class="container section-title">
+    <article class="container-center">
+      <h1 class="title-primary"><b>EAD</b>Calculadora</h1>
+      <p class="subtitle-primary">Saiba como fazer a melhor precificação para vender seus cursos online</p>
+    </article>
+    <div class="onda-top"></div>
+  </article>
+
+  <article class="container section-calculator">
+    <div class="container-center calculator-wrapper">
+      <form class="form-calculator">
+        <div class="box-50">
+          <label for="calculate-df" class="df">Despesas fixas <span class="questions">?</span></label>
+          <input type="text" id="calculate-df" class="calculate-df" placeholder="Valor" value="" required  maxlength="3"/>
+          <input type="range" id="calculate-df-range" class="calculate-df-range" min="0" max="100" value="0"/>
+        </div>
+        <div class="box-50">
+          <label for="calculate-cp" class="cp">Custo de produção <span class="questions">?</span></label>
+          <input type="text" id="calculate-cp" class="calculate-cp money" placeholder="   Custo" value="" required/>
+          <input type="range" id="calculate-cp-range" class="calculate-cp-range" min="0" max="99999" value="0" />
+        </div>
+        <div class="box-50">
+          <label for="calculate-dv" class="dv">Despesas variáveis <span class="questions">?</span></label>
+          <input type="text" id="calculate-dv" class="calculate-dv" placeholder="Valor"  value="" required maxlength="3"/>
+          <input type="range" id="calculate-dv-range" class="calculate-dv-range" min="0" max="100" value="0"/>
+        </div>
+        <div class="box-50">
+          <label for="calculate-ml" class="ml">Margem de lucro <span class="questions">?</span></label>
+          <input type="text" id="calculate-ml" class="calculate-ml" placeholder="Valor" value="" required  maxlength="3"/>
+          <input type="range" id="calculate-ml-range" class="calculate-ml-range" min="0" max="100" value="0"/>
+        </div>
+        <button type="button" class="calculator-button-clear">Limpar</button>
+      </form>
+      <div class="calculator-box-result">
+        <div class="calculator-box-result-wrapper">
+          <h4 class="calculator-text">O preço de venda será</h4>
+          <p class="calculator-text-paragrafo"><span class="calculator-cifrao">R$</span>
+            <span class="calculator-result-finaly">0,00</span>
+          </p>
+          <button class="calculator-button-start">Começar</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-center howToDoCalc invisible">
+      <div class="howToDoCalc__wrapper">
+        <h3 class="howToDoCalc__title">Como são feitos os cálculos?</h3>
+        <ul class="howToDoCalc__list">
+          <li class="howToDoCalc__item">Primeiro calcula-se o <b>markup</b>, que utiliza as somos das porcentagens das despezas fixas, variáveis e margem de lucro.</li>
+          <li class="howToDoCalc__item"><b>Fórmula do markup</b>: 100/[100 - (Despesas fixas + Despesas variáveis + Margem de lucro)]</li>
+          <li class="howToDoCalc__item">Depois multiplica-se o resultado markup com o custo de produção para calcular o preço final de venda.</li>
+          <li class="howToDoCalc__item"><b>Fórmula do preço de venda</b>: Markup x Custo de produção</li>
+        </ul>
+      </div>
+      <div class="howToDoCalc__box-form">
+        <div class="howToDoCalc__markup">
+          <h3 class="howToDoCalc__markup-title">Markup</h3>
+          <p class="howToDoCalc__markup-text">100</p>
+          <p class="howToDoCalc__markup-formula">100-(DF + DV + ML)</p>
+        </div>
+        <div class="howToDoCalc__venda">
+          <h3 class="howToDoCalc__venda-title">Preço de venda</h3>
+          <p class="howToDoCalc__venda-text"><b>Custo de produção</b> <br /> x Markup</p>
+        </div>
+      </div>
+      <span class="howToDoCalc__link">Página desenvolvida com base na planilha para precificação de cursos. <a href="javascript:void(0)">Clique para acessar </a></span>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="onda-bottom"></div>
+    <article class="container-center">
+      <div class="footer-wrapper">
+        <div class="logo-footer">
+          <span class="logo-footer-box">
+            <a href="javascript:void(0)">
+              <img src="./images/logo-footer.png" alt="EAD Calculadora" />
+            </a>
+          </span>
+          <p class="footer-text-logo">feita com 💛 em Bauru</p>
+
+          <ul class="footer-sociais">
+            <li class="footer-sociais-item">
+              <a href="javascript:void(0)" target="_blank">
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
+                  class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512">
+                  <path fill="currentColor"
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-sociais-item">
+              <a href="javascript:void(0)" target="_blank">
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                  class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-sociais-item">
+              <a href="javascript:void(0)" target="_blank">
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                  class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-sociais-item">
+              <a href="javascript:void(0)" target="_blank">
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="wordpress-simple"
+                  class="svg-inline--fa fa-wordpress-simple fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M256 8C119.3 8 8 119.2 8 256c0 136.7 111.3 248 248 248s248-111.3 248-248C504 119.2 392.7 8 256 8zM33 256c0-32.3 6.9-63 19.3-90.7l106.4 291.4C84.3 420.5 33 344.2 33 256zm223 223c-21.9 0-43-3.2-63-9.1l66.9-194.4 68.5 187.8c.5 1.1 1 2.1 1.6 3.1-23.1 8.1-48 12.6-74 12.6zm30.7-327.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-21.9 0-58.7-2.8-58.7-2.8-12-.7-13.4 17.7-1.4 18.4 0 0 11.4 1.4 23.4 2.1l34.7 95.2L200.6 393l-81.2-241.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-4.2 0-9.1-.1-14.4-.3C109.6 73 178.1 33 256 33c58 0 110.9 22.2 150.6 58.5-1-.1-1.9-.2-2.9-.2-21.9 0-37.4 19.1-37.4 39.6 0 18.4 10.6 33.9 21.9 52.3 8.5 14.8 18.4 33.9 18.4 61.5 0 19.1-7.3 41.2-17 72.1l-22.2 74.3-80.7-239.6zm81.4 297.2l68.1-196.9c12.7-31.8 17-57.2 17-79.9 0-8.2-.5-15.8-1.5-22.9 17.4 31.8 27.3 68.2 27.3 107 0 82.3-44.6 154.1-110.9 192.7z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-sociais-item">
+              <a href="javascript:void(0)" target="_blank">
+                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin"
+                  class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path fill="currentColor"
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <p class="footer-copyright">&copy; 2020 EAD Plataform</p>
+        </div>
+        <nav class="menu-footer">
+          <div class="menu-footer-content">
+            <h3 class="menu-footer__title">Produto <span class="icon-arrow hide-on-desktop"><img
+                  src="./images/chevron-down-solid.png" alt="arrow" /></span></h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="/planos">Planos</a></li>
+              <li class="menu-footer__item"><a href="/teste-gratis">Teste grátis</a></li>
+              <li class="menu-footer__item"><a href="/recursos">Recursos</a></li>
+            </ul>
+          </div>
+          <div class="menu-footer-content">
+            <h3 class="menu-footer__title">Soluções <span class="icon-arrow hide-on-desktop"><img
+                  src="./images/chevron-down-solid.png" alt="arrow" /></span></h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="/exemplos">Exemplos</a></li>
+              <li class="menu-footer__item"><a href="/central-de-ajuda">Central de ajuda</a></li>
+              <li class="menu-footer__item"><a href="/seja-um-parceiro">Seja um parceiro</a></li>
+              <li class="menu-footer__item"><a href="/avaliacoes">Avaliações</a></li>
+            </ul>
+          </div>
+          <div class="menu-footer-content">
+            <h3 class="menu-footer__title">Institucional <span class="icon-arrow hide-on-desktop"><img
+                  src="./images/chevron-down-solid.png" alt="arrow" /></span></h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="/blog">Planos</a></li>
+              <li class="menu-footer__item"><a href="/sobre-nos">Sobre nós</a></li>
+              <li class="menu-footer__item"><a href="/fale-conosco">Fale conosco</a></li>
+              <li class="menu-footer__item"><a href="/politica-de-privacidade">Política de privacidade</a></li>
+              <li class="menu-footer__item"><a href="/termos-de-uso">Termos de uso</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </article>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/sweetalert2.all.min.js"></script>
+  <script src="./js/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('input[type="text"]').mask("#.##000", { reverse: true });
+      $('.money').mask("#.##0,00", { reverse: true });
+    })
+  </script>
+</body>
+
+</html>
